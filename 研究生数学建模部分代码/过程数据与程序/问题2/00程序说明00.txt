@@ -1,0 +1,34 @@
+best.m
+遗传算法找到最优个体
+calfitvalue.m
+遗传算法计算适应度
+citySelect.m
+输出遗传算法所计算城区的数据
+crossover.m
+遗传算法交叉
+initpop.m
+遗传算法生成种群
+mutation.m
+遗传算法变异
+selection.m
+遗传算法选择复制
+main.m
+遗传算法主程序，生成过程数据 changchun.mat、chaoyang.mat等
+
+paramOutput.m
+输出某个城区的投放点相关信息，生成过程数据 xxxDeliverPoint.mat，
+其中“xxx”为城区前两个字的拼音例如changchunDeliverPoint.mat，保存的
+就是 长春新区 的投放点的信息其中 Delivery_num 中是投放点服务的小区的数
+量，DeliveryPoint 保存的是投放点的坐标，DeliveryPointServe_R 保存的是投
+放点的服务半径，servePeople_num 中保存的是投放点的服务人数
+
+circleplotfun.m
+绘制投放点的服务半径
+
+mapplot.m
+绘制地图以及小区
+
+Tplot.m
+绘制某个城区的全部投放点 (论文中的图进行了放大)
+
+由于遗传算法生成初始种群的随机性，再次运行程序得到的结果可能与论文中的结果不同

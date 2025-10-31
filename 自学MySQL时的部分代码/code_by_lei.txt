@@ -1,0 +1,50 @@
+select * from emp, dept;
+select * from emp, dept where emp.dept_id = dept.id;
+
+select emp.name, dept.name from emp, dept where emp.dept_id = dept.id;
+select emp.name, dept.name from emp inner join dept on emp.dept_id = dept.id;
+
+select * from emp left join dept on emp.dept_id = dept.id;
+select * from emp right join dept on emp.dept_id = dept.id;
+
+
+select * from emp e1 join emp e2 on e1.managerid = e2.id;
+select e1.name, e2.name from emp e1 join emp e2 on e1.managerid = e2.id;
+
+select * from emp e1 left join emp e2 on e1.managerid = e2.id;
+select e1.name, e2.name from emp e1 left join emp e2 on e1.managerid = e2.id;
+
+select * from emp where salary<5000;
+select * from emp where age>50;
+select * from emp where salary<5000 or age>50;
+
+select * from emp where salary<5000
+union all
+select * from emp where age>50;
+
+select * from dept where name='销售部';
+select * from emp where dept_id=4;
+select * from emp where dept_id=(select id from dept where name='销售部');
+
+select entrydate from emp where name='方东白';
+select * from emp where entrydate>(select entrydate from emp where name='方东白');
+
+select id from dept where dept.name in ('销售部','市场部');
+select * from emp where emp.dept_id in (select id from dept where dept.name in ('销售部','市场部'));
+
+select id from dept where dept.name='财务部';
+select salary from emp where dept_id=(select id from dept where dept.name='财务部');
+select * from emp where salary>all(select salary from emp where dept_id=(select id from dept where dept.name='财务部'));
+
+select id from dept where dept.name='研发部';
+select salary from emp where dept_id=(select id from dept where dept.name='研发部');
+select * from emp where salary > any (select salary from emp where dept_id=(select id from dept where dept.name='研发部'));
+select * from emp where (salary,managerid)=(select emp.salary,emp.managerid from emp where name='张无忌');
+
+select emp.job,emp.salary from emp where name in ('鹿杖客','宋远桥');
+select * from emp where (job,salary) in (select emp.job,emp.salary from emp where name in ('鹿杖客','宋远桥'));
+
+select * from emp where entrydate>'2006-01-01';
+select dept.name from dept where id in  (select dept_id from emp where entrydate>'2006-01-01');
+select * from emp left join dept on emp.dept_id = dept.id;
+select * from (select * from emp where entrydate>'2006-01-01') as aaa left join dept on aaa.dept_id=dept.id;

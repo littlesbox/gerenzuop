@@ -1,0 +1,75 @@
+center.mat
+保存的是问题四中上游聚集中心的坐标，聚集中心为问题四中上游中心到投放点的路径
+的起点，即 xxxRal2DelPath.mat 中的第一行第二列。
+
+changchun.mat
+保存的是问题二中遗传算法在 长春新区 上运行的结果
+
+chaoyang.mat
+保存的是问题二中遗传算法在 朝阳区 上运行的结果
+
+erdao.mat
+保存的是问题二中遗传算法在 二道区 上运行的结果
+
+jingkai.mat
+保存的是问题二中遗传算法在 经开区 上运行的结果
+
+jingyue.mat
+保存的是问题二中遗传算法在 净月区 上运行的结果
+
+kuancheng.mat
+保存的是问题二中遗传算法在 宽城区 上运行的结果
+
+lvyuan.mat
+保存的是问题二中遗传算法在 绿园区 上运行的结果
+
+nanguan.mat
+保存的是问题二中遗传算法在 南关区 上运行的结果
+
+qikai.mat
+保存的是问题二中遗传算法在 汽开区 上运行的结果
+
+xxxDeliverPoint.mat
+保存的是 xxx区 的投放点的信息，其中“xxx”为城区前两个字的拼音
+例如changchunDeliverPoint.mat，保存的就是 长春新区 的投放点的信息
+其中 Delivery_num 中是投放点服务的小区的数量，DeliveryPoint 保存的是
+投放点的坐标，DeliveryPointServe_R 保存的是投放点的服务半径，
+servePeople_num 中保存的是投放点的服务人数
+由问题二 paramOutput.m 程序输出
+
+xxxRal2DelPath.mat
+保存的是 xxx区 上游中心到投放点的详细路径信息，其中第一列为中心所到投放
+点的路口编号，第二列为路段起点，第三列为路段终点。其中“xxx”为城区
+前两个字的拼音，例如 changchunRal2DelPath.mat，保存的就是 长春新区 的
+上游中心到投放点的详细路径信息。
+由问题四 paramOutput2.m 程序输出
+
+xxxallDel2ComPath.mat
+保存的是 xxx区 投放点到小区的详细路径信息，其中第一列为投放点的路口编
+号，第二列为小区编号，第三列为路段起点，第四列为路段终点。其中“xxx”为
+城区前两个字的拼音，例如 changchunallDel2ComPath.mat，保存的就是 长春新区 的
+投放点到小区的详细路径信息。
+由问题四 paramOutput3.m 程序输出
+
+house.mat
+保存的是小区的信息，其中 houseloc_x 为小区的横坐标，houseloc_y 为小区的纵
+坐标，housetype 为小区所属城区。
+
+housetypeindex.mat
+保存的是城区对应的小区的编号
+
+new304514.mat
+保存的是3月4日到5月14日长春市新增感染人数
+
+road.mat
+保存的是路网信息，其中 roadloc_x 为路口横坐标，roadloc_y 为路口纵坐标，
+roadsta 为路段起点，roaden 为路段终点
+
+蔬菜包.xlsx
+保存的是从附件5整理的蔬菜包发放数据
+
+path.mat
+保存的是路网数据中任意两个路口之间的可达矩阵
+
+附件3：长春市9个区交通网络数据和主要小区相关数据.xlsx
+来源于问题附件3，在第三个表格“各区主要小区数据”中加了一列
